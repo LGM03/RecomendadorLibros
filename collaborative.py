@@ -24,7 +24,7 @@ def agregar_usuarios(graph, usuario):
         if (libro_uri, RDF.type, ONTO.LibrosXXI) in graph and (usuario_uri, ONTO.leGusta, libro_uri) not in graph:
             graph.add((usuario_uri, ONTO.leGusta, libro_uri))
 
-    sbc.save(graph, "grafo_recomendador.html", format="turtle")
+    sbc.save(graph, "grafo_con_usuarios.ttl", format="turtle")
 
 def jaccard_users(graph, user1_uri, user2_uri):
 
